@@ -9,7 +9,7 @@ function Read(){
             axios.get('http://localhost:4000/api/books') // API URL
             .then(
                 (response) => {
-                    setData(response.data.books); // Update value.
+                    setData(response.data.martin_books); // Update value.
                 }
             )
             .catch(
