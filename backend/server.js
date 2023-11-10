@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post('api/book', (req, res) => {
+app.post('/api/book', (req, res) => {
   console.log(req.body);
   res.send("Data received. ");
 })

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 function Create(){
     // Adding of state variables.
@@ -11,6 +12,17 @@ function Create(){
         console.log("Title: " + title +
                     " Cover: " + cover +
                     " Author: " + author);
+        
+        const book = {
+            title: title,
+            cover: cover,
+            author: author
+        }
+        // Make a post to that URL and send the book object.
+        axios.post('http://localhost:4000/api/book', book)
+        .then()
+        .catch();
+
     } // Show up in the logs.
 
     return(
